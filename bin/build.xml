@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NotaFiscalEletronicaBrasileiraV20PEConfig" default="jar" basedir=".">
+	<target name="compile" description="Compile target">
+		<javac srcdir="../src" destdir="../bin"/>
+	</target>
+	<target name="jar" description="Make the jar file">
+		<jar jarfile="../build/nfepeconf.jar" whenempty="fail" basedir="../bin" manifest="br/com/hs/nfe/pe/ui/META-INF/MANIFEST.MF">
+			<include name="**/*.class" />
+			<include name="**/*.wsdl" />
+			<include name="**/*.xsl" />
+			<include name="**/*.xml" />
+			<include name="**/*.jasper" />
+			<include name="**/*.gif" />
+			<include name="**/*.jpg" />
+			<include name="**/*.png" />
+		</jar>
+	</target>
+</project>
